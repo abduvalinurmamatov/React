@@ -1,0 +1,121 @@
+@import "./../../Style/style.scss";
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background: url("./../../assets/hero-bg.jpg") no-repeat;
+  position: relative;
+
+  .overlay {
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      place-items: center;
+      @media (max-width: 992px) {
+        flex-direction: column;
+        row-gap: 20px;
+        flex-wrap: wrap;
+      }
+      &__item {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media (max-width: 992px) {
+          &:first-child {
+            justify-content: flex-end;
+            align-items: center;
+          }
+        }
+        @media (max-width: 992px) {
+          flex: 0 0 100%;
+        }
+        &:last-child {
+          align-items: center;
+        }
+      ;
+
+        &__title {
+          font-size: 48px;
+          color: white;
+          line-height: 56px;
+          font-weight: 700;
+          margin-bottom: 20px;
+          @media (max-width: 1024px) {
+            font-size: 42px;
+          }
+          @media (max-width: 992px) {
+            text-align: center;
+          }
+          @media (max-width: 768px) {
+            font-size: 32px;
+          }
+          @media (max-width: 4    14px) {
+            font-size: 26px;
+            line-height: 32px;
+          }
+
+          span {
+            color: #cda45e;
+          }
+        }
+
+        &__subtitle {
+          color: white;
+          font-size: 22px;
+          margin-bottom: 30px;
+          @media (max-width: 1024px) {
+            font-size: 20px;
+          }
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+          @media (max-width: 414px) {
+            font-size: 18px;
+          }
+        }
+
+        &__btn {
+          width: 160px;
+          font-weight: 600;
+          font-size: 13px;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          border-radius: 50px;
+          border: 2px solid #cda45e;
+          padding: 15px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            background: #cda45e;
+            transition: 0.3s all ease;
+            transform: scale(1.05);
+          }
+        }
+
+        &__play {
+          width: 94px;
+          height: 94px;
+          border-radius: 50%;
+          background: #cda45e;
+          color: white;
+          font-size: 24px;
+          z-index: 1;
+          position: relative;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "./../../Style/style.scss";
+.special-section {
+  background: #0c0b09;
+  width: 100%;
+  min-height: 40vh;
+  padding: 40px 0;
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    hr {
+      background: #aaaaaa;
+      margin-left: 10px;
+      max-width: 80px;
+      width: 100%;
+      height: 1.5px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #cda45e;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    @media (max-width: 992px){
+      font-size: 28px;
+    }
+    @media (max-width: 768px){
+      font-size: 24px;
+    }
+    @media (max-width: 414px){
+      font-size: 18px;
+    }
+  }
+  .special {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 250px 1fr;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 40px;
+    }
+
+    .content {
+      display: flex;
+      row-gap: 40px;
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+      }
+      &__text {
+        flex: 0 0 50%;
+        @media (992px) {
+          flex: 0 0 100%;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        &__title {
+          font-size: 26px;
+          color: #fff;
+          margin-bottom: 20px;
+        }
+        &__price {
+          font-size: 16px;
+          color: #aaaaaa;
+          margin-bottom: 16px;
+        }
+        &__desc {
+          font-size: 16px;
+          color: #AAAAAA;
+          line-height: 170%;
+        }
+      }
+      &__img {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (992px) {
+          max-width: 781.98px;
+          width: 100%;
+          flex: 0 0 100%;
+        }
+        img {
+          max-width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
